@@ -4,9 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { Caveat } from "next/font/google";
+import { caveat } from "@/lib/fonts";
 
-const caveat = Caveat({ subsets: ["latin"], weight: ["700"] });
 
 const products = [
   {

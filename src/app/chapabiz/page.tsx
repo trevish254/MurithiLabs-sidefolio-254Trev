@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { Caveat } from "next/font/google";
+import { caveat } from "@/lib/fonts";
 import { Sparkles, Calendar, ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { BallpitHero } from "@/components/ui/interactive-hero-backgrounds";
 
-const caveat = Caveat({ subsets: ["latin"], weight: ["400", "700"] });
 
 // ── Launch countdown target: 30 days from now ────────────────────────────────
 const LAUNCH = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);

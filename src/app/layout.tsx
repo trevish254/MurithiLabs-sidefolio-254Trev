@@ -1,7 +1,7 @@
 import { Sidebar } from "@/components/Sidebar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { inter } from "@/lib/fonts";
 import { twMerge } from "tailwind-merge";
 import { ThemeProvider } from "next-themes";
 import { MobileNavProvider } from "@/context/MobileNavContext";
@@ -9,10 +9,6 @@ import { FocusProvider } from "@/context/FocusContext";
 import { MainContentWrapper } from "@/components/MainContentWrapper";
 import GlobalNavigation from "@/components/ui/GlobalNavigation";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export const metadata: Metadata = {
   title: "Trevor - Systems Builder & Digital Innovator",

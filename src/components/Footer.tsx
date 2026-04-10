@@ -1,10 +1,9 @@
 import React from "react";
-import { Caveat } from "next/font/google";
+import { caveat } from "@/lib/fonts";
 import { Twitter, Instagram, AtSign, Music } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const caveat = Caveat({ subsets: ["latin"], weight: ["700"] });
 
 export const Footer = () => {
   return (

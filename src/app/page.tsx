@@ -1,4 +1,4 @@
-import { Dancing_Script, Caveat } from "next/font/google";
+import { dancing, caveat } from "@/lib/fonts";
 import { Footer } from "@/components/Footer";
 import { MessageSquare, ArrowRight, Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -9,8 +9,7 @@ import FeaturedWork from "@/components/ui/FeaturedWork";
 import FlagshipProducts from "@/components/ui/FlagshipProducts";
 import LatestInsights from "@/components/ui/LatestInsights";
 import ParallaxSection from "@/components/ui/ParallaxSection";
-const dancing = Dancing_Script({ subsets: ["latin"], weight: ["700"] });
-const caveat  = Caveat({ subsets: ["latin"], weight: ["700"] });
+
 
 export default function Home() {
   return (
