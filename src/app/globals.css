@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sidebar-w: 280px;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-neutral-200 antialiased;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes noise-animation {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-2%, -3%); }
+  20% { transform: translate(-4%, 2%); }
+  30% { transform: translate(2%, -4%); }
+  40% { transform: translate(-2%, 5%); }
+  50% { transform: translate(-4%, 2%); }
+  60% { transform: translate(3%, 0); }
+  70% { transform: translate(0, 3%); }
+  80% { transform: translate(-3%, 0); }
+  90% { transform: translate(2%, 2%); }
+  100% { transform: translate(1%, 0); }
+}
+
+/* ── PARALLAX UTILITIES ── */
+.parallax__header {
+  position: relative;
+  height: 100vh;
+}
+.parallax__visuals {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.parallax__layers {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.parallax__layer-img {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+  top: 0;
+}
+.parallax__layer-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+.parallax__title {
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+.parallax__fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(to top, black, transparent);
+  z-index: 10;
+}
+
+
+
+
+
+.parallax__content {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  padding: 8vw;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 8vw;
+}
+
+.parallax__about-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12vw 4vw;
+}
+
+@media (min-width: 768px) {
+  .parallax__about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .parallax__about-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.parallax__about-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.parallax__story {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4vw;
+  margin-bottom: 8vw;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .parallax__story {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+.parallax__story-text {
+  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.parallax__story-image-card {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: #eee;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.parallax__story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parallax__about-label {
+
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  border-bottom: 1.5px solid #000;
+  padding-bottom: 0.4rem;
+  width: fit-content;
+}
+
+.parallax__about-text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 90%;
+  opacity: 0.9;
+}
+
+
+.parallax__experience {
+  margin-top: 4vw;
+}
+
+.parallax__experience-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  opacity: 0.8;
+  margin-top: 2rem;
+}
+
+.parallax__exp-logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+
+.osmo-icon-svg {
+  width: 120px;
+  color: white;
+  opacity: 0.5;
+}
+
+/* ── CYBERDECK UI UTILITIES ── */
+.cyber-panel {
+  background: linear-gradient(145deg, #121212, #0a0a0a);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.05),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cyber-panel-gold {
+  border: 1px solid rgba(191, 160, 90, 0.3);
+  box-shadow: 
+    inset 0 0 15px rgba(191, 160, 90, 0.05),
+    0 0 20px rgba(191, 160, 90, 0.1);
+}
+
+.glow-yellow {
+  filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.4));
+}
+
+.glow-red {
+  filter: drop-shadow(0 0 8px rgba(255, 77, 0, 0.5));
+}
+
+
+/* ── CYBERDECK GEOMETRIES ── */
+.clip-logo-custom {
+  clip-path: polygon(
+    11% 4%, 
+    93% 4%, 
+    100% 13%, 
+    100% 92%, 
+    94% 100%, 
+    55% 100%, 
+    53% 65%, 
+    11% 55%
+  );
+}
+
+.clip-panel-top {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.clip-panel-outer {
+  clip-path: polygon(
+    20px 0, 
+    100% 0, 
+    100% calc(100% - 40px), 
+    calc(100% - 40px) 100%, 
+    0 100%, 
+    0 20px
+  );
+}
+
+.mechanical-border-gold {
+  position: relative;
+  background: #BFA05A;
+  padding: 1px; /* The border thickness */
+}
+
+
+.cyber-stroke-gold {
+  filter: 
+    drop-shadow(1px 0 0 rgba(191, 160, 90, 0.8))
+    drop-shadow(-1px 0 0 rgba(191, 160, 90, 0.8))
+    drop-shadow(0 1px 0 rgba(191, 160, 90, 0.8))
+    drop-shadow(0 -1px 0 rgba(191, 160, 90, 0.8));
+}
+
+.cyber-stroke-gold-glow {
+  filter: 
+    drop-shadow(1px 0 0 #BFA05A)
+    drop-shadow(-1px 0 0 #BFA05A)
+    drop-shadow(0 1px 0 #BFA05A)
+    drop-shadow(0 -1px 0 #BFA05A)
+    drop-shadow(0 0 8px rgba(191, 160, 90, 0.4));
+}
+
