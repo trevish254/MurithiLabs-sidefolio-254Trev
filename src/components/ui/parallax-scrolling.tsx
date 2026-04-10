@@ -150,7 +150,7 @@ export function ParallaxComponent() {
           <div className="parallax__about-item">
             <span className="parallax__about-label">/ PRODUCTION</span>
             <p className="parallax__about-text">
-              Production can make or break digital projects. That's why we built it in-house: 3D, motion, video, and a fully lit cyc wall studio. Few can match the scale and speed we deliver.
+              Production can make or break digital projects. That&apos;s why we built it in-house: 3D, motion, video, and a fully lit cyc wall studio. Few can match the scale and speed we deliver.
             </p>
           </div>
         </div>

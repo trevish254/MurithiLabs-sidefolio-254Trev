@@ -64,7 +64,7 @@ export const Sidebar = () => {
 
   useEffect(() => {
     closeSidebar();
-  }, [pathname]);
+  }, [pathname, closeSidebar]);
 
   const SidebarContent = ({ isMobile = false }: { isMobile?: boolean }) => (
     <div 

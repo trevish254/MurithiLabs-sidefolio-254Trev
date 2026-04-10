@@ -386,7 +386,7 @@ function Scene() {
           </Points>
           
           <Text position={[0, 0, 1]} fontSize={0.3} maxWidth={8} textAlign="center" color="#ffffff">
-            "My goal is to build platforms that help businesses grow and operate intelligently through connected digital ecosystems."
+            &quot;My goal is to build platforms that help businesses grow and operate intelligently through connected digital ecosystems.&quot;
           </Text>
         </group>
 
