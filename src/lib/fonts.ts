@@ -1,19 +1,16 @@
-import { Inter, Dancing_Script, Caveat } from "next/font/google";
+import localFont from "next/font/local";
 
-export const inter = Inter({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+export const inter = localFont({
+  src: "../app/fonts/inter.woff2",
   display: "swap",
 });
 
-export const dancing = Dancing_Script({ 
-  subsets: ["latin"], 
-  weight: ["700"],
+export const dancing = localFont({
+  src: "../app/fonts/dancing-script.woff2",
   display: "swap",
 });
 
-export const caveat = Caveat({ 
-  subsets: ["latin"], 
-  weight: ["700"],
+export const caveat = localFont({
+  src: "../app/fonts/caveat.woff2",
   display: "swap",
 });
