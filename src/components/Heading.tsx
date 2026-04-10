@@ -16,7 +16,7 @@ export const Heading = ({
 }: {
   className?: string;
   children: React.ReactNode;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
 }) => {
   return (
     <Tag
