@@ -393,7 +393,7 @@ function Scene() {
         {/* Section 5: Connect */}
         <group position={[0, -viewport.height * 5, 0]}>
            <HolographicPanel 
-            title="LET'S BUILD"
+            title="LET&apos;S BUILD"
             subtitle="Secure Terminal Hub"
             content="Always open for collaboration on systems that matter."
             buttonText="Initiate Contact"

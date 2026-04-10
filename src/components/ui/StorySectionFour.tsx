@@ -148,11 +148,11 @@ export function StorySectionFour() {
               <div className="grid grid-cols-1 gap-10">
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-neutral-600">/ STRATEGY</span>
-                  <p className="text-neutral-400 text-sm leading-relaxed">We start by decoding your brand's unique position, mapping out the emotional landscape your identity will inhabit.</p>
+                  <p className="text-neutral-400 text-sm leading-relaxed">We start by decoding your brand&apos;s unique position, mapping out the emotional landscape your identity will inhabit.</p>
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-neutral-600">/ TYPOGRAPHY</span>
-                  <p className="text-neutral-400 text-sm leading-relaxed">Every letterform tells a story. We curate and design type systems that carry the weight and authority of your brand's voice.</p>
+                  <p className="text-neutral-400 text-sm leading-relaxed">Every letterform tells a story. We curate and design type systems that carry the weight and authority of your brand&apos;s voice.</p>
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-neutral-600">/ COLOR SYSTEMS</span>

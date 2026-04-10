@@ -132,7 +132,7 @@ export function StorySectionFive() {
                 Motion and imagery are the pulse of modern storytelling.
               </h1>
               <p className="text-neutral-500 text-xs md:text-sm font-normal leading-relaxed max-w-md">
-                Digital creativity is about transcending static boundaries through immersive 3D and dynamic motion design. We create visuals that aren't just seen, but felt.
+                Digital creativity is about transcending static boundaries through immersive 3D and dynamic motion design. We create visuals that aren&apos;t just seen, but felt.
               </p>
             </div>
 
@@ -152,7 +152,8 @@ export function StorySectionFive() {
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-neutral-600">/ MOTION DESIGN</span>
-                  <p className="text-neutral-400 text-sm leading-relaxed">Fluidity in motion. We craft animation systems that guide the user's focus and breathe life into UI and brand assets.</p>
+                  <p className="text-neutral-400 text-sm leading-relaxed">Fluidity in motion. We craft animation systems that guide the user&apos;s focus and breathe life into UI and brand assets.</p>
+
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-neutral-600">/ ART DIRECTION</span>

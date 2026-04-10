@@ -89,7 +89,7 @@ export const Footer = () => {
                 Submit
               </button>
             </form>
-            <p className="text-neutral-500">Don't miss any update!</p>
+            <p className="text-neutral-500">Don&apos;t miss any update!</p>
           </div>
         </div>
 

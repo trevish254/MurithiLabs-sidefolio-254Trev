@@ -132,7 +132,7 @@ export function StorySectionThree() {
                 Performance is the silent hero—where complex logic meets effortless speed.
               </h1>
               <p className="text-neutral-500 text-xs md:text-sm font-normal leading-relaxed max-w-md">
-                We engineer scalable infrastructures that breathe with your brand. Our development focus isn't just on building features, but on creating resilient systems.
+                We engineer scalable infrastructures that breathe with your brand. Our development focus isn&apos;t just on building features, but on creating resilient systems.
               </p>
             </div>
 
@@ -152,7 +152,7 @@ export function StorySectionThree() {
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-neutral-600">/ SCALABILITY</span>
-                  <p className="text-neutral-400 text-sm leading-relaxed">Modular codebases that grow with your ambitions. Today's deployment is the foundation for tomorrow's expansion.</p>
+                  <p className="text-neutral-400 text-sm leading-relaxed">Modular codebases that grow with your ambitions. Today&apos;s deployment is the foundation for tomorrow&apos;s expansion.</p>
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-neutral-600">/ PERFORMANCE</span>

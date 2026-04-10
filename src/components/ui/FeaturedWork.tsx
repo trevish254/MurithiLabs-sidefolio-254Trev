@@ -38,7 +38,7 @@ export default function FeaturedWork() {
             Settling <span className="italic font-serif text-white/90">is easy</span>
           </h2>
           <p className="text-white text-2xl md:text-3xl font-medium leading-tight tracking-tight">
-            the work here isn't built for that
+            the work here isn&apos;t built for that
           </p>
         </div>
 

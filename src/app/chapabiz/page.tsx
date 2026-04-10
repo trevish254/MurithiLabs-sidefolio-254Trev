@@ -1,11 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import { caveat } from "@/lib/fonts";
 import { Sparkles, Calendar, ArrowRight } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { BallpitHero } from "@/components/ui/interactive-hero-backgrounds";
-
 
 // ── Launch countdown target: 30 days from now ────────────────────────────────
 const LAUNCH = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
@@ -13,7 +12,7 @@ const LAUNCH = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
 type CountdownState = { days: number; hours: number; minutes: number; seconds: number };
 
 function useCountdown(target: Date) {
-  const calc = (): CountdownState => {
+  const calc = useCallback((): CountdownState => {
     const diff = Math.max(0, target.getTime() - Date.now());
     return {
       days: Math.floor(diff / 86400000),
@@ -21,14 +20,14 @@ function useCountdown(target: Date) {
       minutes: Math.floor((diff % 3600000) / 60000),
       seconds: Math.floor((diff % 60000) / 1000),
     };
-  };
+  }, [target]);
   // Start null so server and client both render "--" initially — fixes hydration mismatch
   const [t, setT] = useState<CountdownState | null>(null);
   useEffect(() => {
     setT(calc());
     const id = setInterval(() => setT(calc()), 1000);
     return () => clearInterval(id);
-  }, []);
+  }, [calc]);
   return t;
 }
 

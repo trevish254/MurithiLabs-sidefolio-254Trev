@@ -129,10 +129,10 @@ export function StorySectionTwo() {
             <div className="space-y-6">
               <span className="text-neutral-600 text-[10px] uppercase tracking-[0.4em] font-black border-b border-neutral-800 pb-1">/ THE CHAPTER</span>
               <h1 className="text-xl md:text-3xl lg:text-4xl font-black uppercase leading-[1.2] tracking-tight">
-                Digital architecture is more than just code; it's the rhythm of human interaction.
+                Digital architecture is more than just code; it&apos;s the rhythm of human interaction.
               </h1>
               <p className="text-neutral-500 text-xs md:text-sm font-normal leading-relaxed max-w-md">
-                Every pixel is weighted by purpose. We craft environments that don't just display information, but invite discovery through motion and depth.
+                Every pixel is weighted by purpose. We craft environments that don&apos;t just display information, but invite discovery through motion and depth.
               </p>
             </div>
 
