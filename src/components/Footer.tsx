@@ -15,7 +15,7 @@ export const Footer = () => {
           <Link href="/" className="group cursor-pointer">
             <div className="relative h-16 w-48 flex items-center">
               <Image 
-                src="/murithi-labs-logo.png" 
+                src="/murithi-labs-logo.webp" 
                 alt="Murithi Labs Logo" 
                 width={192} 
                 height={64} 

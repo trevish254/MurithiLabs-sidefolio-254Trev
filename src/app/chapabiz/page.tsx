@@ -165,7 +165,7 @@ export default function ChapabizPage() {
             {/* Actual product screenshot */}
             <div className="relative w-full">
               <Image
-                src="/chapabiz-product.png"
+                src="/chapabiz-product.webp"
                 alt="Chapabiz — Multi-Tenant Business Operating System"
                 width={1280}
                 height={720}

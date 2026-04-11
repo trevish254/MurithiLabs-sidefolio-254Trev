@@ -10,28 +10,28 @@ const PROJECTS = [
     id: 1,
     title: "Mockup Design",
     slug: "macbook-pro-16",
-    image: "/images/macbook-orange.png",
+    image: "/images/macbook-orange.webp",
     color: "bg-zinc-900"
   },
   {
     id: 2,
     title: "Book Cover",
     slug: "showcase-a4",
-    image: "/images/book-blue.png",
+    image: "/images/book-blue.webp",
     color: "bg-blue-50"
   },
   {
     id: 3,
     title: "Font Design",
     slug: "tape-duct",
-    image: "/images/tape-orange.png",
+    image: "/images/tape-orange.webp",
     color: "bg-red-600"
   },
   {
     id: 4,
     title: "Application",
     slug: "iphone-16-pro",
-    image: "/images/iphone-purple.png",
+    image: "/images/iphone-purple.webp",
     color: "bg-zinc-800"
   }
 ];

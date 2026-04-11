@@ -80,19 +80,19 @@ export function ParallaxComponent() {
         <div className="parallax__visuals">
           <div className="parallax__black-line-overflow"></div>
           <div data-parallax-layers className="parallax__layers">
-            <img src="/night-sky.jpg" loading="eager" width="800" data-parallax-layer="1" alt="" className="parallax__layer-img" />
+            <img src="/night-sky.webp" loading="eager" width="800" data-parallax-layer="1" alt="" className="parallax__layer-img" />
             
             <div data-parallax-layer="2" className="parallax__layer-title">
               <h2 className="parallax__title">MURITHI</h2>
             </div>
             
-            <img src="/mid-mountain.png" loading="eager" width="800" data-parallax-layer="3" alt="" className="parallax__layer-img" />
+            <img src="/mid-mountain.webp" loading="eager" width="800" data-parallax-layer="3" alt="" className="parallax__layer-img" />
 
 
 
 
             
-            <img src="/astro-character.png" loading="eager" width="800" data-parallax-layer="4" alt="" className="parallax__layer-img" />
+            <img src="/astro-character.webp" loading="eager" width="800" data-parallax-layer="4" alt="" className="parallax__layer-img" />
 
 
 
@@ -119,7 +119,7 @@ export function ParallaxComponent() {
             </h1>
           </div>
           <div className="parallax__story-image-card">
-            <img src="/trevor-real.png" alt="Murithi Labs Story" className="parallax__story-img" />
+            <img src="/trevor-real.webp" alt="Murithi Labs Story" className="parallax__story-img" />
           </div>
 
         </div>

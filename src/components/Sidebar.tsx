@@ -90,7 +90,7 @@ export const Sidebar = () => {
         <div className="absolute top-[4.5%] left-[8%] w-[35%] h-[20%] flex flex-col items-center justify-center p-2">
            <Link href="/" className="block transition-transform duration-500 hover:scale-105 hover:glow-yellow rounded-xl w-[80%]">
              <Image 
-               src="/murithi-labs-logo.png" 
+               src="/murithi-labs-logo.webp" 
                alt="Logo" 
                width={160} 
                height={40} 

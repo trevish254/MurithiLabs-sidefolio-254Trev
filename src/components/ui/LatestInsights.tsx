@@ -9,25 +9,25 @@ const insights = [
     title: "When is it time for a Rebrand?",
     meta: "4m read-time. Mon 9 March '26",
     author: "Author: Ravi Klaassens",
-    image: "/rebrand_insight_preview.png",
+    image: "/rebrand_insight_preview.webp",
   },
   {
     title: "Process of a R-K project",
     meta: "3m read-time. Fri 20 February '26",
     author: "Author: Ravi Klaassens",
-    image: "/process_insight_preview.png",
+    image: "/process_insight_preview.webp",
   },
   {
     title: "Presence as a brand cornerstone",
     meta: "3m read-time. Fri 9 January '26",
     author: "Author: Ravi Klaassens",
-    image: "/prop_films_close_up.png",
+    image: "/prop_films_close_up.webp",
   },
   {
     title: "Creation of the R—K brand",
     meta: "5m read-time. Fri 5 December '25",
     author: "Author: Ravi Klaassens",
-    image: "/luxury_bags_web_dev.png",
+    image: "/luxury_bags_web_dev.webp",
   },
 ];
 

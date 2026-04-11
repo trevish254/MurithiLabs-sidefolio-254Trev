@@ -1,11 +1,11 @@
-import sidefolioAceternity from "public/images/sidefolio-aceternity-2.png";
-import sidefolioAceternity2 from "public/images/sidefolio-aceternity-2.png";
-import sidefolioAlgochurn from "public/images/sidefolio-algochurn.png";
-import sidefolioAlgochurn2 from "public/images/sidefolio-algochurn.png";
-import sidefolioMoonbeam from "public/images/sidefolio-moonbeam.png";
-import sidefolioMoonbeam2 from "public/images/sidefolio-moonbeam-2.png";
-import sidefolioTailwindMasterKit from "public/images/sidefolio-tailwindmasterkit.png";
-import sidefolioTailwindMasterKit2 from "public/images/sidefolio-tailwindmasterkit-2.png";
+import sidefolioAceternity from "public/images/sidefolio-aceternity-2.webp";
+import sidefolioAceternity2 from "public/images/sidefolio-aceternity-2.webp";
+import sidefolioAlgochurn from "public/images/sidefolio-algochurn.webp";
+import sidefolioAlgochurn2 from "public/images/sidefolio-algochurn.webp";
+import sidefolioMoonbeam from "public/images/sidefolio-moonbeam.webp";
+import sidefolioMoonbeam2 from "public/images/sidefolio-moonbeam-2.webp";
+import sidefolioTailwindMasterKit from "public/images/sidefolio-tailwindmasterkit.webp";
+import sidefolioTailwindMasterKit2 from "public/images/sidefolio-tailwindmasterkit-2.webp";
 
 export const products = [
   {
@@ -132,8 +132,8 @@ export const products = [
     href: "/projects/macbook-pro-16",
     title: "Mockup Design",
     description: "High-end Macbook Pro 16 3D mockups for architectural presentation.",
-    thumbnail: "/images/macbook-orange.png",
-    images: ["/images/macbook-orange.png"],
+    thumbnail: "/images/macbook-orange.webp",
+    images: ["/images/macbook-orange.webp"],
     stack: ["Cinema 4D", "Redshift", "Photoshop"],
     slug: "macbook-pro-16",
     content: (
@@ -146,8 +146,8 @@ export const products = [
     href: "/projects/showcase-a4",
     title: "Book Cover",
     description: "Minimalist book cover design and 3D stack presentation.",
-    thumbnail: "/images/book-blue.png",
-    images: ["/images/book-blue.png"],
+    thumbnail: "/images/book-blue.webp",
+    images: ["/images/book-blue.webp"],
     stack: ["InDesign", "3ds Max"],
     slug: "showcase-a4",
     content: (
@@ -160,8 +160,8 @@ export const products = [
     href: "/projects/tape-duct",
     title: "Font Design",
     description: "Experimental typography applied to 3D product surfaces.",
-    thumbnail: "/images/tape-orange.png",
-    images: ["/images/tape-orange.png"],
+    thumbnail: "/images/tape-orange.webp",
+    images: ["/images/tape-orange.webp"],
     stack: ["Illustrator", "Dimension"],
     slug: "tape-duct",
     content: (
@@ -174,8 +174,8 @@ export const products = [
     href: "/projects/iphone-16-pro",
     title: "Application",
     description: "iOS Mobile application design with focus on dark mode and ergonomics.",
-    thumbnail: "/images/iphone-purple.png",
-    images: ["/images/iphone-purple.png"],
+    thumbnail: "/images/iphone-purple.webp",
+    images: ["/images/iphone-purple.webp"],
     stack: ["Figma", "SwiftUI"],
     slug: "iphone-16-pro",
     content: (

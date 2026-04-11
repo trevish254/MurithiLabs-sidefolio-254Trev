@@ -95,15 +95,15 @@ export function StorySectionTwo() {
         <div className="parallax__visuals">
           <div className="parallax__black-line-overflow"></div>
           <div data-parallax-layers className="parallax__layers">
-            <img src="/yellow-backdrop.png" loading="eager" data-parallax-layer="1" alt="" className="parallax__layer-img" style={{ zIndex: 0 }} />
+            <img src="/yellow-backdrop.webp" loading="eager" data-parallax-layer="1" alt="" className="parallax__layer-img" style={{ zIndex: 0 }} />
             
             <div data-parallax-layer="2" className="parallax__layer-title" style={{ zIndex: 1, position: 'absolute', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', paddingTop: '15vh' }}>
               <h2 className="parallax__title" style={{ fontSize: 'clamp(2.5rem, 8.5vw, 6.5rem)', letterSpacing: '0.02em', textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>WEB DESIGN</h2>
             </div>
             
-            <img src="/Web design mid mountain.png" loading="eager" data-parallax-layer="3" alt="" className="parallax__layer-img" style={{ zIndex: 2, top: '8%' }} />
+            <img src="/Web design mid mountain.webp" loading="eager" data-parallax-layer="3" alt="" className="parallax__layer-img" style={{ zIndex: 2, top: '8%' }} />
             
-            <img src="/webdesign.png" loading="eager" data-parallax-layer="4" alt="" className="parallax__layer-img" style={{ zIndex: 3, height: '80%', width: 'auto', objectFit: 'contain', bottom: '0', top: 'auto', left: '50%', transform: 'translateX(-50%)' }} />
+            <img src="/webdesign.webp" loading="eager" data-parallax-layer="4" alt="" className="parallax__layer-img" style={{ zIndex: 3, height: '80%', width: 'auto', objectFit: 'contain', bottom: '0', top: 'auto', left: '50%', transform: 'translateX(-50%)' }} />
           </div>
           <div className="parallax__fade"></div>
         </div>
@@ -139,7 +139,7 @@ export function StorySectionTwo() {
             {/* ART CARD */}
             <div className="pt-4">
               <div className="h-64 md:h-80 w-full bg-white/5 rounded-2xl border border-white/5 overflow-hidden">
-                <img src="/trevor-real.png" alt="Process" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" />
+                <img src="/trevor-real.webp" alt="Process" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity duration-700" />
               </div>
             </div>
 

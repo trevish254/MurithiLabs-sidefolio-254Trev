@@ -39,7 +39,7 @@ export default function ContactPage() {
           {/* Left Side: Editorial Portrait */}
           <div className="lg:col-span-2 relative min-h-[400px] bg-red-600">
              <Image 
-                src="/images/contact-portrait.png" 
+                src="/images/contact-portrait.webp" 
                 alt="Trevor Portrait" 
                 fill 
                 className="object-cover"

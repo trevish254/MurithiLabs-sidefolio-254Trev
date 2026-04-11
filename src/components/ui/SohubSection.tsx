@@ -37,7 +37,7 @@ export default function SohubSection() {
           className="relative w-full h-full"
         >
           <Image 
-            src="/assets/Trevdesign.png"
+            src="/assets/Trevdesign.webp"
             alt="Vertex Design Elements"
             fill
             className="object-contain drop-shadow-[0_35px_35px_rgba(255,255,255,0.05)]"

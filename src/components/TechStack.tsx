@@ -7,7 +7,7 @@ export const TechStack = () => {
   const stack = [
     {
       title: "Next.js",
-      src: "/images/logos/next.png",
+      src: "/images/logos/next.webp",
 
       className: "h-10 w-14",
     },
@@ -19,7 +19,7 @@ export const TechStack = () => {
     },
     {
       title: "Figma",
-      src: "/images/logos/figma.png",
+      src: "/images/logos/figma.webp",
 
       className: "h-10 w-8",
     },
@@ -31,19 +31,19 @@ export const TechStack = () => {
     },
     {
       title: "Node",
-      src: "/images/logos/node.png",
+      src: "/images/logos/node.webp",
 
       className: "h-10 w-12",
     },
     {
       title: "Tailwind",
-      src: "/images/logos/tailwind.png",
+      src: "/images/logos/tailwind.webp",
 
       className: "h-10 w-24",
     },
     {
       title: "Vercel",
-      src: "/images/logos/vercel.png",
+      src: "/images/logos/vercel.webp",
 
       className: "h-10 w-24",
     },
