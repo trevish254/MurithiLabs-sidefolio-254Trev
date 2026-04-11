@@ -9,6 +9,7 @@ import { FocusProvider } from "@/context/FocusContext";
 import { MainContentWrapper } from "@/components/MainContentWrapper";
 import GlobalNavigation from "@/components/ui/GlobalNavigation";
 import GlobalPreloader from "@/components/ui/GlobalPreloader";
+import RouteSkeleton from "@/components/ui/RouteSkeleton";
 
 export const metadata: Metadata = {
   title: "Trevor - Systems Builder & Digital Innovator",
@@ -33,6 +34,7 @@ export default function RootLayout({
           <MobileNavProvider>
             <FocusProvider>
               <GlobalPreloader />
+              <RouteSkeleton />
               <Sidebar />
               <MainContentWrapper>
                 {children}
