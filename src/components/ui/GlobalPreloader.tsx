@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { useProgress } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
 
 const loadingTextStates = [
   "INITIALIZING ENVIRONMENT...",
@@ -17,7 +16,6 @@ const loadingTextStates = [
 
 export default function GlobalPreloader() {
   const { progress: threeProgress, active: threeActive } = useProgress();
-  const pathname = usePathname();
   
   const [loading, setLoading] = useState(true);
   const [textIndex, setTextIndex] = useState(0);
@@ -25,20 +23,15 @@ export default function GlobalPreloader() {
   const [imageProgress, setImageProgress] = useState(0);
   const [totalProgress, setTotalProgress] = useState(0);
 
-  // Trigger preloader open on route changes
+  // Trigger only on initial app mount
   useEffect(() => {
-    setLoading(true);
-    setImageProgress(0);
-    setTotalProgress(0);
-    setHasStartedLoading(false);
-    
     // Cycle text
     const textInterval = setInterval(() => {
       setTextIndex((prev) => (prev + 1) % loadingTextStates.length);
     }, 1000);
 
     return () => clearInterval(textInterval);
-  }, [pathname]);
+  }, []);
 
   useEffect(() => {
     if (threeActive) setHasStartedLoading(true);
@@ -73,7 +66,7 @@ export default function GlobalPreloader() {
     }, 200);
 
     return () => clearTimeout(mountWait);
-  }, [loading, pathname]);
+  }, [loading]);
 
   // Calculate Combined Progress
   useEffect(() => {
@@ -112,7 +105,7 @@ export default function GlobalPreloader() {
       setLoading(false);
     }, 12000); // 12 seconds max
     return () => clearTimeout(fallback);
-  }, [loading, pathname]);
+  }, [loading]);
 
   // Handle body scroll
   useEffect(() => {
