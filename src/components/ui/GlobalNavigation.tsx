@@ -4,9 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const TRACKS = [
-  { file: "/ambient.mp3", title: "Ambient Beats", artist: "Orange Free Sounds" },
   { file: "/syouki_takahashi-midnight-forest-184304.mp3", title: "Midnight Forest", artist: "Syouki Takahashi" },
-  { file: "/rockot-eona-emotional-ambient-pop-351436.mp3", title: "Eona Emotional Ambient", artist: "Rockot" },
   { file: "/nveravetyanmusic-deep-future-garage-royalty-free-music-163081.mp3", title: "Future Garage", artist: "Nver Avetyan" },
   { file: "/tunetank-inspiring-cinematic-music-409347.mp3", title: "Inspiring Cinematic", artist: "Tunetank" },
   { file: "/evgeny_bardyuzha-embrace-364091 (1).mp3", title: "Embrace", artist: "Evgeny Bardyuzha" },
