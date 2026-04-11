@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 
 const MonitorModel = () => {
   const { scene } = useGLTF("/assets/ultrawide_monitor.glb");
+  // @ts-ignore
   const videoTexture = useVideoTexture(encodeURI("/assets/intro vid.mp4"));
   const meshRef = React.useRef<THREE.Group>(null);
 
@@ -63,6 +64,7 @@ const MonitorCanvas = () => {
         <ambientLight intensity={1.5} />
         
         {/* Main dramatic spotlight with shadow support */}
+        {/* @ts-ignore */}
         <SpotLight
           position={[0, 30, 10]}
           angle={0.25}

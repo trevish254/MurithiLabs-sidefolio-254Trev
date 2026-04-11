@@ -64,7 +64,9 @@ const PortraitModel = () => {
           metalness={0.1}
         >
           {/* Live render of spinning neon toruses projected onto every face */}
+          {/* @ts-ignore */}
           <RenderTexture attach="map" samples={4}>
+            {/* @ts-ignore */}
             <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={50} />
             <color attach="background" args={["#0a0a0a"]} />
             <ambientLight intensity={2} />

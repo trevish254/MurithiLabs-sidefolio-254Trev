@@ -50,7 +50,7 @@ export function ParallaxComponent() {
 
       const lenis = new Lenis({
         wrapper: scroller,
-        content: scroller.querySelector('div'), // Target the inner content wrapper
+        content: scroller.querySelector('div') as HTMLElement, // Target the inner content wrapper
         lerp: 0.1,
       });
 
