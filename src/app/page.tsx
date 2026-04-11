@@ -9,13 +9,11 @@ import FeaturedWork from "@/components/ui/FeaturedWork";
 import FlagshipProducts from "@/components/ui/FlagshipProducts";
 import LatestInsights from "@/components/ui/LatestInsights";
 import ParallaxSection from "@/components/ui/ParallaxSection";
-import GlobalPreloader from "@/components/ui/GlobalPreloader";
 
 
 export default function Home() {
   return (
     <div className="w-full bg-black relative">
-      <GlobalPreloader />
 
       {/* ═══════════════════════ VIDEO HERO (NEW) ═══════════════════════ */}
       <ParallaxSection zIndex={10}>

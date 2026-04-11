@@ -3,64 +3,125 @@
 import React, { useEffect, useState } from "react";
 import { useProgress } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const loadingTextStates = [
   "INITIALIZING ENVIRONMENT...",
   "LOADING ASSETS...",
   "PREPARING 3D MODELS...",
   "COMPILING SHADERS...",
+  "MOUNTING IMAGES...",
   "ALMOST THERE...",
   "FINALIZING..."
 ];
 
 export default function GlobalPreloader() {
-  const { progress, active } = useProgress();
+  const { progress: threeProgress, active: threeActive } = useProgress();
+  const pathname = usePathname();
+  
   const [loading, setLoading] = useState(true);
   const [textIndex, setTextIndex] = useState(0);
   const [hasStartedLoading, setHasStartedLoading] = useState(false);
+  const [imageProgress, setImageProgress] = useState(0);
+  const [totalProgress, setTotalProgress] = useState(0);
 
+  // Trigger preloader open on route changes
   useEffect(() => {
-    // Mark as started once we see active loading to prevent premature clearing
-    if (active) setHasStartedLoading(true);
-  }, [active]);
-
-  useEffect(() => {
+    setLoading(true);
+    setImageProgress(0);
+    setTotalProgress(0);
+    setHasStartedLoading(false);
+    
+    // Cycle text
     const textInterval = setInterval(() => {
       setTextIndex((prev) => (prev + 1) % loadingTextStates.length);
-    }, 1500);
+    }, 1000);
+
     return () => clearInterval(textInterval);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
-    // We add a min display time of 2 seconds to build anticipation even if from cache,
-    // but we also wait until progress hits 100%. If it loads instantly from cache (progress = 100 right away), 
-    // it will still show for 2 seconds.
-    if ((progress === 100 && hasStartedLoading) || (progress === 100 && !active)) {
+    if (threeActive) setHasStartedLoading(true);
+  }, [threeActive]);
+
+  // Monitor DOM Images tracking
+  useEffect(() => {
+    if (!loading) return;
+
+    // Wait a brief moment for images to inject into DOM
+    const mountWait = setTimeout(() => {
+      const images = Array.from(document.images);
+      if (images.length === 0) {
+        setImageProgress(100);
+        return;
+      }
+      
+      let loaded = 0;
+      const countImage = () => {
+        loaded++;
+        setImageProgress(Math.floor((loaded / images.length) * 100));
+      };
+
+      images.forEach((img) => {
+        if (img.complete) {
+          countImage();
+        } else {
+          img.addEventListener('load', countImage, { once: true });
+          img.addEventListener('error', countImage, { once: true });
+        }
+      });
+    }, 200);
+
+    return () => clearTimeout(mountWait);
+  }, [loading, pathname]);
+
+  // Calculate Combined Progress
+  useEffect(() => {
+     let calcProgress = 0;
+     if (hasStartedLoading || threeActive) {
+       // If 3D models exist on page, they take priority weight
+       calcProgress = Math.floor(((threeActive ? threeProgress : 100) * 0.8) + (imageProgress * 0.2));
+     } else {
+       // Otherwise (like on About/Story pages), purely rely on image loading
+       calcProgress = imageProgress;
+     }
+     
+     setTotalProgress(Math.max(calcProgress, totalProgress)); // prevents shrinking
+  }, [threeProgress, threeActive, imageProgress, hasStartedLoading, totalProgress]);
+
+  // Finalize when everything is done
+  useEffect(() => {
+    // Determine condition for "100%"
+    // Either (ThreeJS reaches 100% OR wasn't active) AND (Images reach 100%)
+    const threeDone = (threeProgress === 100 && hasStartedLoading) || (!threeActive && !hasStartedLoading);
+    const imagesDone = imageProgress === 100;
+
+    if (threeDone && imagesDone && loading) {
+      // Small timeout to show completed state
       const timer = setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 1500);
       return () => clearTimeout(timer);
     }
-  }, [progress, active, hasStartedLoading]);
+  }, [threeProgress, threeActive, hasStartedLoading, imageProgress, loading]);
 
-  // Failsafe timeout to ensure user is never stuck on loading screen
+  // Failsafe timeout to ensure user is never stuck
   useEffect(() => {
+    if (!loading) return;
     const fallback = setTimeout(() => {
       setLoading(false);
-    }, 12000); // Max wait time of 12 seconds
+    }, 12000); // 12 seconds max
     return () => clearTimeout(fallback);
-  }, []);
+  }, [loading, pathname]);
 
-  // Prevent scroll while loading
+  // Handle body scroll
   useEffect(() => {
     if (loading) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [loading]);
 
   return (
@@ -109,7 +170,7 @@ export default function GlobalPreloader() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.3 }}
-                  className="text-white/60 text-[11px] uppercase tracking-[0.4em] font-bold absolute text-center w-full"
+                  className="text-white/60 text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold absolute text-center w-full"
                 >
                   {loadingTextStates[textIndex]}
                 </motion.span>
@@ -117,17 +178,17 @@ export default function GlobalPreloader() {
             </div>
 
             {/* Progress Bar */}
-            <div className="flex items-center gap-4 mt-4 w-full">
-               <div className="w-64 h-[2px] bg-white/5 relative overflow-hidden flex-1 rounded-full">
+            <div className="flex items-center gap-4 mt-4 w-full justify-center">
+               <div className="w-48 md:w-64 h-[2px] bg-white/5 relative overflow-hidden rounded-full">
                  <motion.div 
                    className="absolute top-0 left-0 h-full bg-white shadow-[0_0_15px_rgba(255,255,255,0.8)]"
                    initial={{ width: "0%" }}
-                   animate={{ width: `${Math.max(progress, 2)}%` }}
+                   animate={{ width: `${Math.max(totalProgress, 2)}%` }}
                    transition={{ duration: 0.2 }}
                  />
                </div>
-               <div className="text-white/40 text-[10px] font-mono tracking-widest w-8 text-right font-bold">
-                 {Math.floor(progress)}%
+               <div className="text-white/40 text-[10px] font-mono tracking-widest w-10 text-right font-bold">
+                 {totalProgress}%
                </div>
             </div>
             
